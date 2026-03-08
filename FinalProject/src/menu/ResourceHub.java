@@ -83,7 +83,7 @@ public class ResourceHub {
 
  case 2:
 
- recyclingCenters();
+ recyclingCenters(scnr);
 
  break;
 
@@ -143,19 +143,75 @@ public class ResourceHub {
 
  System.out.println("\nLearn What Can Be Recycled selected.");
 
- System.out.println("FOR FUTURE DEVELOPMENT");
+ String[] accept = {"Plastic bottles, Cups & Containers", "Emptied Alluminum cans", "Paper & Paper Cups", "Glass Bottles & Containers", "Flattened Cardboard & Paperboard"};
+
+ String[] reject = {"Batteries", "Power Tools", "Flamable or Hazardous Waste", "Foam Cups, Containers or Straws", "Food or Liquids", "Clothing, Furniture or Carpet", "Loose Plastic Bags", "Green Waste"};
+
+ 
+
+ //Concept used: Iteration using for-loops
+
+ System.out.print("\nYES, Recycle These:\n");
+
+ for (String item : accept) {
+
+	 System.out.println("+ " + item); 
 
  }
 
  
 
+ System.out.print("\nNO, Don't Recycle These (Trash Them):\n");
+
+ for (String item : reject) {
+
+	 System.out.println("x " + item);
+
+ }
+
+ System.out.println("\n------ Returning To Main Menu -----\n"); // Just to let the user know they are going to be redirected to the Main Menu
+
+ }
+
+ 
+
+ 
+
  // Feature 2 (Text return)
 
- public static void recyclingCenters() {
+ public static void recyclingCenters(Scanner scnr) {
 
  System.out.println("\nFind Local Recycling Centers selected.");
 
- System.out.println("FOR FUTURE DEVELOPMENT");
+ System.out.print("Enter your material type (Plastic, Metal, or Paper): ");
+
+ String type = scnr.next().toLowerCase();
+
+ 
+
+ // Concept used: Branching (Conditional Logic)
+
+ if (type.equals("plastic")) {
+
+	 System.out.println("\nCenter Found: 'Everett Recycling Hub' - 123 Eco St.");
+
+ } else if (type.equals("metal")) {
+
+ 	System.out.println("\nCenter Found: 'Lynnwood Recycling Solutions' - 321 Iron Way.");
+
+ } else if (type.equals("paper")) {
+
+	 System.out.println("\nCenter Found: 'Factoria Recycling Warehouse' - 268 Treestop Ave.");
+
+ } else {
+
+	 System.out.println("\n Sorry! No specific center found for '" + type + "'. Try the General City Dump.");
+
+ }
+
+ 
+
+ System.out.println("\n------ Returning To Main Menu -----\n");
 
  }
 
@@ -167,7 +223,28 @@ public class ResourceHub {
 
  System.out.println("\nTrack Your Recycling Habits selected.");
 
- System.out.println("FOR FUTURE DEVELOPMENT");
+//Concept used: Primitive Array (Data Structure)
+int[] weeklyLog = new int[7]; //Here we are creating a array list of type int with 7 slots exactly for each day of the week
+int totalItems = 0; //And here we're just initializing the variable totalItems to 0 to start accumulating the amount of recycled items
+
+// Concept used: Traditional For-Loop (Iteration)
+for (int i = 0; i < weeklyLog.length; i++) {
+	System.out.print("Enter the number items recycled on day " + (i + 1) + ": ");
+	weeklyLog[i] = scnr.nextInt();
+	totalItems += weeklyLog[i]; // Accumulating the sum
+}
+
+	System.out.println("\n---------- Weekly Report ----------");
+	System.out.println("\nTotal items recycled: " + totalItems);
+
+// Concept used: Simple Arithmetic & Branching
+if (totalItems > 20) {
+	System.out.println("Status: Great job! Recycling Superstar!");
+} else {
+	System.out.println("Status: Good start! Keep it up!.");
+}
+
+System.out.println("\n------ Returning To Main Menu -----\n");
 
  }
 
