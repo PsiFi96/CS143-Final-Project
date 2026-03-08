@@ -256,8 +256,24 @@ System.out.println("\n------ Returning To Main Menu -----\n");
 
  System.out.println("\nRecycling Tips & Education selected.");
 
- System.out.println("FOR FUTURE DEVELOPMENT");
+ System.out.println("\n------ Tips to Improve Recycling -----\\n");
+ System.out.println("1. Make sure the item is clean and dry, food waste can contanimate entire loads!"
+ 		+ "\n2. Don't recycle materials that are mixed, as they cannot be sorted properly."
+ 		+ "\n3. Be certain what your recycling is actually recyclable, as sorting takes a lot of time and failure can contanimate loads!"
+ 		+ "\n4. Consider composting as well! Composting can help to turn food and paper waste into soil and is extremely beneficial!"
+ 		+ "\n5. Find recycling opportunities for specific items like electronics and batteries, the more that can be reused the better!");
+ 
+ System.out.println("\nFor Further Tips, Check Out These Sites:"
+		 + "\nhttps://www.recycleacrossamerica.org/tips-to-recycle-right"
+		 + "\nhttps://www.earthday.org/7-tips-to-recycle-better/"
+		 + "\nhttps://kingcounty.gov/en/dept/dnrp/waste-services/garbage-recycling-compost/services/recycling/how-to-recycle-right");
 
+ try {
+     Thread.sleep(6000);
+ } catch (InterruptedException e) {
+	 System.out.println("Load Error Found");
+ }
+ System.out.println("\n------ Returning To Main Menu -----\n");
  }
 
  
