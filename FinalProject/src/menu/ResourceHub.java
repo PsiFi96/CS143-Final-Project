@@ -158,8 +158,12 @@ public class ResourceHub {
 	 System.out.println("+ " + item); 
 
  }
-
  
+ try {
+     Thread.sleep(4000);
+ } catch (InterruptedException e) {
+	 System.out.println("Load Error Found");
+ }
 
  System.out.print("\nNO, Don't Recycle These (Trash Them):\n");
 
@@ -167,6 +171,12 @@ public class ResourceHub {
 
 	 System.out.println("x " + item);
 
+ }
+ 
+ try {
+     Thread.sleep(4500);
+ } catch (InterruptedException e) {
+	 System.out.println("Load Error Found");
  }
 
  System.out.println("\n------ Returning To Main Menu -----\n"); // Just to let the user know they are going to be redirected to the Main Menu
@@ -209,7 +219,11 @@ public class ResourceHub {
 
  }
 
- 
+ try {
+     Thread.sleep(2000);
+ } catch (InterruptedException e) {
+	 System.out.println("Load Error Found");
+ }
 
  System.out.println("\n------ Returning To Main Menu -----\n");
 
@@ -242,6 +256,11 @@ if (totalItems > 20) {
 	System.out.println("Status: Great job! Recycling Superstar!");
 } else {
 	System.out.println("Status: Good start! Keep it up!.");
+}
+try {
+    Thread.sleep(2500);
+} catch (InterruptedException e) {
+	 System.out.println("Load Error Found");
 }
 
 System.out.println("\n------ Returning To Main Menu -----\n");
