@@ -1,5 +1,5 @@
 ## PROJECT SUMMARY:  
-This is Recylcying Resource Hub, a tool used to help you find more about recycling and you're impact with it!  
+This is Recylcying Resource Hub, a tool used to help you find more about recycling and your impact through it!  
 
 ## SEQUENCE:    
 <img width="5781" height="3532" alt="image" src="https://github.com/user-attachments/assets/187b16f8-b690-4aa5-8ff2-304c931c4928" />
